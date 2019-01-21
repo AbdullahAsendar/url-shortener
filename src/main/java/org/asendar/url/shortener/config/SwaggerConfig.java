@@ -2,6 +2,7 @@ package org.asendar.url.shortener.config;
 
 import java.util.Arrays;
 
+import org.asendar.url.shortener.entity.UserAuthentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -35,6 +36,7 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.basePackage("org.asendar.url.shortener"))
                 .paths(PathSelectors.any())
                 .build()
+                .ignoredParameterTypes(UserAuthentication.class)
                 .apiInfo(apiInfo())
                 .enable(!prod);
     }

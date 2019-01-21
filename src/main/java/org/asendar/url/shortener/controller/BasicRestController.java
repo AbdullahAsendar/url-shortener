@@ -5,6 +5,7 @@ package org.asendar.url.shortener.controller;
 
 import java.util.Map;
 
+import org.asendar.url.shortener.controller.constans.Constants;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +17,7 @@ import com.google.common.collect.Maps;
  *
  */
 @RestController
-public class BasicRestController {
+public class BasicRestController implements Constants{
 
 	/**
 	 * 
